@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NewWarFragment1">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="53dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:gravity="center"
+                app:fontFamily="@font/convergence"
+                android:text="Fall of Constantinople:\n"/>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fall"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:gravity="center"
+                app:fontFamily="@font/convergence"
+                android:text="The last siege of Constantinople, contemporary 15th century French miniature. \n"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                app:fontFamily="@font/convergence"
+                android:text="@string/war_suljuk_end1"/>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/fall1"
+                />
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

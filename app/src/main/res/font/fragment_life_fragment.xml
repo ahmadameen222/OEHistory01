@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".life_fragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="53dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF"
+            android:orientation="vertical"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="EARLY LIFE:"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text="@string/life_intro"
+                />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ertugrul1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text="@string/life_fam_det"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Who Were Oghuz Turks:"/>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center"
+                android:src="@drawable/oghuz"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:layout_gravity="left|right"
+                android:text="@string/Oghuz_turks"
+                />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/oghuz1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text="for more: taryhturkmen.blogspot.com"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Who Were Kayis/Kayi Tribe:"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text="@string/Kayi_tribe"
+                />
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/kayi"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:text="Ertugrul Ghazi Tomb, Sogut, Turkey"/>
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/tomb"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text="@string/life_death"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="IMPORTANT CHARACTERS:"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text="@string/life_characters"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

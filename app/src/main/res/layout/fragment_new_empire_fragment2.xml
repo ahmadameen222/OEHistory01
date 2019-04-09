@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".NewEmpireFragment2">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="53dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/osman" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Prophetic vision:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/convergence" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/p_vision"
+                android:textSize="18sp"
+                app:fontFamily="@font/convergence" />
+
+            <Button
+                android:id="@+id/empire_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/next_xml"
+                android:gravity="center"
+                android:text="NEXT"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
