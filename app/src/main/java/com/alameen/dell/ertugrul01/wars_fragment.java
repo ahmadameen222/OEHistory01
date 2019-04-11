@@ -15,29 +15,11 @@ import static com.alameen.dell.ertugrul01.MainActivity.counter;
 public class wars_fragment extends Fragment {
 
 
-    Button wars_btn;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_wars_fragment, container, false);
-
-        wars_btn = (Button)v.findViewById(R.id.wars_btn);
-
-        wars_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter++;
-                NewWarFragment2 fragment = new NewWarFragment2();
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.main_fragment_area, fragment);
-                fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
-            }
-        });
-
+        View v = inflater.inflate(R.layout.activity_splash, container, false);
         return v;
     }
 }

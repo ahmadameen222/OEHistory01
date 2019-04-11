@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:padding="20dp"
+            android:text="ERTUGRUL"
+            android:textColor="#FFFFFF"
+            android:textSize="33sp"
+            app:fontFamily="@font/aclonica" />
+
+        <TextView
+            android:id="@+id/about_us_tv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".5"
+            android:background="@drawable/mosque8"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            app:fontFamily="@font/acme" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e5fafafa"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/img_main"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ertugrul1" />
+
+            <TextView
+                android:id="@+id/head_text_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="Heading"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/abeezee"
+                />
+
+            <TextView
+                android:text="Details"
+                android:id="@+id/text_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textSize="22sp"
+                android:fontFamily="@font/actor"
+                />
+
+
+            <ImageView
+                android:id="@+id/img_main1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-6081186777692750/2192090909" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
