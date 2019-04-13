@@ -1,6 +1,8 @@
 package com.alameen.dell.ertugrul01;
 
+import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -20,6 +22,8 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.doubleclick.PublisherAdRequest;
 import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
+
+import static com.alameen.dell.ertugrul01.MainActivity.InternetConnection.DIALOG_ERROR_CONNECTION;
 
 /*
 import com.google.android.gms.ads.InterstitialAd;
@@ -51,6 +55,14 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(MainActivity.this,"Welcome", Toast.LENGTH_SHORT).show();
         }
 */
+
+
+
+        if (!isOnline(this)) {
+            showDialog(DIALOG_ERROR_CONNECTION); //displaying the created dialog.
+        } else {
+            //Internet available. Do what's required when internet is available.
+        }
 
 
         MobileAds.initialize(this, "ca-app-pub-6081186777692750~2380503603");
@@ -357,5 +369,47 @@ public class MainActivity extends AppCompatActivity {
     }
 */
 
+    public class InternetConnection extends Activity {
+        static final int DIALOG_ERROR_CONNECTION = 1;
+
+    }
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        Dialog dialog = null;
+        switch (id) {
+            case DIALOG_ERROR_CONNECTION:
+                AlertDialog.Builder errorDialog = new AlertDialog.Builder(this);
+                errorDialog.setTitle("We Have a Request:");
+                errorDialog.setIcon(R.drawable.internet);
+                errorDialog.setMessage("Please Connect to Internet, It Will Help us Keep Supporting This App For Free, For All!");
+                errorDialog.setNeutralButton("Sure",
+                        new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                AlertDialog errorAlert = errorDialog.create();
+                return errorAlert;
+
+            default:
+                break;
+        }
+        return dialog;
+    }
+
+    public boolean isOnline(Context c) {
+        ConnectivityManager cm = (ConnectivityManager) c
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo ni = cm.getActiveNetworkInfo();
+
+        if (ni != null && ni.isConnected())
+            return true;
+        else
+            return false;
+    }
 
 }

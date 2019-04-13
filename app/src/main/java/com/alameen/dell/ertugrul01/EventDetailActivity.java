@@ -1,6 +1,7 @@
 package com.alameen.dell.ertugrul01;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -28,6 +29,7 @@ import com.google.android.gms.ads.doubleclick.PublisherInterstitialAd;
 
 import java.util.ArrayList;
 
+import static com.alameen.dell.ertugrul01.MainActivity.InternetConnection.DIALOG_ERROR_CONNECTION;
 import static com.alameen.dell.ertugrul01.MainActivity.mPublisherInterstitialAd;
 
 public class EventDetailActivity extends AppCompatActivity {
@@ -36,7 +38,7 @@ public class EventDetailActivity extends AppCompatActivity {
     private TextView text_main, head_text_main;
     private Bundle extras;
     private String title;
-
+    private static int error_connection = 0;
     public AdView myAdView;
 
     //    public InterstitialAd mInterstitialAd;
@@ -50,6 +52,20 @@ public class EventDetailActivity extends AppCompatActivity {
         myAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         myAdView.loadAd(adRequest);
+
+
+        if (error_connection >= 4) {
+            if (!isOnline(this)) {
+                showDialog(DIALOG_ERROR_CONNECTION); //displaying the created dialog.
+                error_connection=0;
+            } else {
+                //Internet available. Do what's required when internet is available.
+            }
+        } else {
+            error_connection++;
+        }
+
+
 
 
 /*
@@ -787,5 +803,44 @@ public class EventDetailActivity extends AppCompatActivity {
     }
 
 */
+
+
+    @Override
+    protected Dialog onCreateDialog(int id) {
+        Dialog dialog = null;
+        switch (id) {
+            case DIALOG_ERROR_CONNECTION:
+                AlertDialog.Builder errorDialog = new AlertDialog.Builder(this);
+                errorDialog.setTitle("We Have a Request:");
+                errorDialog.setIcon(R.drawable.internet);
+                errorDialog.setMessage("It Will Help us Keep Supporting This App For Free, For All!");
+                errorDialog.setNeutralButton("Sure",
+                        new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                AlertDialog errorAlert = errorDialog.create();
+                return errorAlert;
+
+            default:
+                break;
+        }
+        return dialog;
+    }
+
+    public boolean isOnline(Context c) {
+        ConnectivityManager cm = (ConnectivityManager) c
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo ni = cm.getActiveNetworkInfo();
+
+        if (ni != null && ni.isConnected())
+            return true;
+        else
+            return false;
+    }
 
 }
