@@ -70,8 +70,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
 
-                counter++;
-                MainActivity.ShowAd();
+                if (counter >= 4) {
+                    MainActivity.ShowAd();
+                    counter = 0;
+                } else {
+                    counter++;
+                }
 
                 Intent intent = new Intent(mContext, EventDetailActivity.class);
 

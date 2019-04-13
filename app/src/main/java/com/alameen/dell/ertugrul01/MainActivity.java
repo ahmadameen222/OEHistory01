@@ -1,6 +1,11 @@
 package com.alameen.dell.ertugrul01;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -38,6 +43,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+/*
+        if (!isConnected(MainActivity.this)) {
+            buildDialog(MainActivity.this).show();
+            return;
+        } else {
+//            Toast.makeText(MainActivity.this,"Welcome", Toast.LENGTH_SHORT).show();
+        }
+*/
+
+
         MobileAds.initialize(this, "ca-app-pub-6081186777692750~2380503603");
 
 
@@ -47,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         mPublisherInterstitialAd = new PublisherInterstitialAd(this);
-        mPublisherInterstitialAd.setAdUnitId("/6499/example/interstitial");
+        mPublisherInterstitialAd.setAdUnitId("ca-app-pub-6081186777692750/2857718581");
         mPublisherInterstitialAd.loadAd(new PublisherAdRequest.Builder().build());
 
-        mPublisherInterstitialAd.setAdListener(new AdListener() {
+        /*mPublisherInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 // Load the next interstitial.
@@ -58,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-
+*/
 
         life_tv = (TextView) findViewById(R.id.life_tv);
         wars_tv = (TextView) findViewById(R.id.wars_tv);
@@ -69,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (counter >= 3) {
+                if (counter >= 4) {
                     MainActivity.ShowAd();
                     counter = 0;
                 } else {
@@ -79,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in_animation, R.anim.fade_out_animation);
                 }
-
 
                 mPublisherInterstitialAd.setAdListener(new AdListener() {
                     @Override
@@ -111,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onAdClosed() {
                         // Code to be executed when the interstitial ad is closed.
+                        mPublisherInterstitialAd.loadAd(new PublisherAdRequest.Builder().build());
                         counter++;
                         Intent i = new Intent(MainActivity.this, EventsListActivity.class);
                         i.putExtra("name", "life_tv");
@@ -127,10 +142,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (counter >= 3) {
+                if (counter >= 4) {
                     MainActivity.ShowAd();
                     counter = 0;
                 } else {
+                    mPublisherInterstitialAd.loadAd(new PublisherAdRequest.Builder().build());
                     counter++;
                     Intent i = new Intent(MainActivity.this, EventsListActivity.class);
                     i.putExtra("name", "wars_tv");
@@ -169,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onAdClosed() {
                         // Code to be executed when the interstitial ad is closed.
+                        mPublisherInterstitialAd.loadAd(new PublisherAdRequest.Builder().build());
                         counter++;
                         Intent i = new Intent(MainActivity.this, EventsListActivity.class);
                         i.putExtra("name", "wars_tv");
@@ -185,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (counter >= 3) {
+                if (counter >= 4) {
                     MainActivity.ShowAd();
                     counter = 0;
                 } else {
@@ -227,6 +244,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onAdClosed() {
                         // Code to be executed when the interstitial ad is closed.
+                        mPublisherInterstitialAd.loadAd(new PublisherAdRequest.Builder().build());
                         counter++;
                         Intent i = new Intent(MainActivity.this, EventsListActivity.class);
                         i.putExtra("name", "empire_tv");
@@ -243,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (counter >= 3) {
+                if (counter >= 4) {
                     MainActivity.ShowAd();
                     counter = 0;
                 } else {
@@ -284,6 +302,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onAdClosed() {
+                        mPublisherInterstitialAd.loadAd(new PublisherAdRequest.Builder().build());
                         counter++;
                         // Code to be executed when the interstitial ad is closed.
                         Intent i = new Intent(MainActivity.this, EventsListActivity.class);
@@ -306,5 +325,37 @@ public class MainActivity extends AppCompatActivity {
             Log.d("TAG", "The interstitial wasn't loaded yet.");
         }
     }
+
+
+/*
+    public boolean isConnected(Context c) {
+
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    public AlertDialog.Builder buildDialog(Context c) {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("Please Connect Internet:");
+        builder.setMessage("It Will Help us Keep Supporting This App For Free, Thanks");
+        builder.setIcon(R.drawable.internet);
+
+        builder.setPositiveButton("Sure", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // finish();
+//               dialog.dismiss();
+            }
+        });
+
+        return builder;
+    }
+*/
+
 
 }

@@ -1,6 +1,11 @@
 package com.alameen.dell.ertugrul01;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -47,6 +52,22 @@ public class EventDetailActivity extends AppCompatActivity {
         myAdView.loadAd(adRequest);
 
 
+/*
+
+
+        if(!isConnected(EventDetailActivity.this)){
+            buildDialog(EventDetailActivity.this).show();
+            return;
+        }
+        else {
+//            Toast.makeText(MainActivity.this,"Welcome", Toast.LENGTH_SHORT).show();
+            setContentView(R.layout.activity_event_detail);
+        }
+
+*/
+
+
+/*
         mPublisherInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
@@ -55,14 +76,16 @@ public class EventDetailActivity extends AppCompatActivity {
             }
 
         });
+*/
 
-//        mInterstitialAd = new InterstitialAd(this);
-//        mInterstitialAd.setAdUnitId("ca-app-pub-6081186777692750/2857718581");
-//        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+ /*
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-6081186777692750/2857718581");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
 
- /*       mInterstitialAd.setAdListener(new AdListener() {
+       mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 AdRequest adRequest = new AdRequest.Builder().build();
@@ -732,22 +755,37 @@ public class EventDetailActivity extends AppCompatActivity {
     }
 
 
-    //@Override
-/*
-    public void onBackPressed() {
-        //your code when back button pressed
-        if (mPublisherInterstitialAd.isLoaded()) {
-            mPublisherInterstitialAd.show();
-            mPublisherInterstitialAd.setAdListener(new AdListener() {
-                @Override
-                public void onAdClosed() {
-                    super.onAdClosed();
-                    finish();
-                }
-            });
-        }else{
-            super.onBackPressed();
-        }
+
+
+    /*
+    public boolean isConnected(Context c) {
+
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) c.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
+    public AlertDialog.Builder buildDialog(Context c) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("Please Connect Internet");
+        builder.setMessage("It Will Help us Keep Supporting This App For Free, For All!");
+        builder.setIcon(R.drawable.internet);
+        builder.setPositiveButton("Sure", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // finish();
+                setContentView(R.layout.activity_event_detail);
+
+            }
+        });
+
+        return builder;
+    }
+
 */
+
 }
