@@ -25,7 +25,7 @@ public class EventsListActivity extends AppCompatActivity {
         extras = getIntent().getExtras();
         title = extras.getString("name");
 
-        if(title.equals("Life"))
+        if(title.equals("life_tv"))
         {
 
             final ArrayList arrayList = new ArrayList();
@@ -40,11 +40,10 @@ public class EventsListActivity extends AppCompatActivity {
             /*eventClass.add(new EventClass("Graphics Design", "Do You Love Graphic Designing?...", R.drawable.mosque6));
             eventClass.add(new EventClass("Online tutor", "Be an Online Tutor by Teaching Online...", R.drawable.mosque7));
             */
-
         }
 
 
-        else if(title.equals("Wars"))
+        else if(title.equals("wars_tv"))
         {
 
             final ArrayList arrayList = new ArrayList();
@@ -62,7 +61,7 @@ public class EventsListActivity extends AppCompatActivity {
             */
         }
 
-        else if(title.equals("Empire"))
+        else if(title.equals("empire_tv"))
         {
 
             final ArrayList arrayList = new ArrayList();
@@ -79,7 +78,7 @@ public class EventsListActivity extends AppCompatActivity {
             */
         }
 
-        else if(title.equals("Companions"))
+        else if(title.equals("companions_tv"))
         {
 
             final ArrayList arrayList = new ArrayList();
@@ -90,6 +89,7 @@ public class EventsListActivity extends AppCompatActivity {
             eventClass.add(new EventClass("Halime Sultan:", "She was a Seljuk Princess, very dedicated to her husband...", R.drawable.mosque3));
             eventClass.add(new EventClass("Hayme Mother:", "She was a mother of Kayis and Ertugrul Bay...", R.drawable.mosque3));
             eventClass.add(new EventClass("Turgut Bay:", "He was one of the greatest and most renown warriors...", R.drawable.mosque2));
+            eventClass.add(new EventClass("Bsmsi Alp:", "He was one of the bravest alps of Ertugrul and...", R.drawable.mosque2));
             eventClass.add(new EventClass("Ibn-ul-Arabi:", "Ibn Arabi  As many of us know Ibn Arabi is a famous chronologist...", R.drawable.mosque1));
             eventClass.add(new EventClass("Artuk Bay:", "rtuk Bey  Known as Ertugrul Bey’s right hand man...", R.drawable.mosque));
             eventClass.add(new EventClass("Sultan Alā ad–Dīn Kayqubād bin Kaykāvūs:", "Great Sultan Ala ad-Din...", R.drawable.mosque4));

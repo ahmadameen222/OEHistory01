@@ -17,7 +17,10 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>{
+import static com.alameen.dell.ertugrul01.MainActivity.counter;
+
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+
 
     public interface ClickListener {
 
@@ -27,8 +30,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     private ClickListener listener;
-    private Context mContext ;
-    private List<EventClass> mData ;
+    private Context mContext;
+    private List<EventClass> mData;
 
     public ClickListener getListener() {
         return listener;
@@ -38,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         this.listener = listener;
     }
 
-    int i=1;
+    int i = 1;
 
     public RecyclerViewAdapter(Context mContext, List<EventClass> mData) {
         this.mContext = mContext;
@@ -52,11 +55,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         View view;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_item_life,parent,false);
+        view = mInflater.inflate(R.layout.cardview_item_life, parent, false);
         return new MyViewHolder(view);
     }
-
-
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, final int position) {
@@ -69,21 +70,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
 
+                counter++;
+                MainActivity.ShowAd();
+
                 Intent intent = new Intent(mContext, EventDetailActivity.class);
 
                 Bundle dataBundle = new Bundle();
-                dataBundle.putString("topic",mData.get(position).getLifeEventName());
+                dataBundle.putString("topic", mData.get(position).getLifeEventName());
                 //dataBundle.putString("Details",mData.get(position).getLifeEventDesc());
                 //dataBundle.putInt("Thumbnail",mData.get(position).getThumbnail());
 
                 intent.putExtras(dataBundle);
                 mContext.startActivity(intent);
+
+
             }
         });
     }
 
-    public void UpdateList (List<EventClass> newList1)
-    {
+    public void UpdateList(List<EventClass> newList1) {
         mData = new ArrayList<>();
         mData.addAll(newList1);
         notifyDataSetChanged();
@@ -108,9 +113,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView);
 
             listenerRef = new WeakReference<>(listener);
-            tv_dish_title = (TextView) itemView.findViewById(R.id.dish_id) ;
+            tv_dish_title = (TextView) itemView.findViewById(R.id.dish_id);
             img_dish_thumbnail = (ImageView) itemView.findViewById(R.id.img_dish_id);
-            dish_cat_tv = (TextView)itemView.findViewById(R.id.dish_cat_tv);
+            dish_cat_tv = (TextView) itemView.findViewById(R.id.dish_cat_tv);
             cardView = (CardView) itemView.findViewById(R.id.cardview_dishes_id);
         }
 

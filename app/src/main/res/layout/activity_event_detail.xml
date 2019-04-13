@@ -42,76 +42,73 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-    <ScrollView
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp">
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#e5fafafa"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1">
 
-            <ImageView
-                android:id="@+id/img_main"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                android:src="@drawable/ertugrul1" />
-
-            <TextView
-                android:id="@+id/head_text_main"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:padding="5dp"
-                android:textStyle="bold"
-                android:textSize="22sp"
-                android:text="Heading"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:fontFamily="@font/abeezee"
-                />
+                android:background="#ebfafafa"
+                android:orientation="vertical"
+                android:padding="10dp">
 
-            <TextView
-                android:text="Details"
-                android:id="@+id/text_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:textSize="22sp"
-                android:fontFamily="@font/actor"
-                />
+                <ImageView
+                    android:id="@+id/img_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ertugrul1" />
+
+                <TextView
+                    android:id="@+id/head_text_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/abeezee"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Heading"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/actor"
+                    android:padding="5dp"
+                    android:text="Details"
+                    android:textSize="22sp" />
 
 
-            <ImageView
-                android:id="@+id/img_main1"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_gravity="center"
-                />
+                <ImageView
+                    android:id="@+id/img_main1"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center" />
 
+            </LinearLayout>
 
-        </LinearLayout>
-
-    </ScrollView>
-
-
+        </ScrollView>
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
+            android:background="#FFFF"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-6081186777692750/2192090909" />
+            android:layout_alignParentBottom="true"
+            ads:adUnitId="ca-app-pub-6081186777692750/2192090909"
+            />
 
     </RelativeLayout>
-
 
 </LinearLayout>

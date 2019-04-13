@@ -67,6 +67,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="vertical"
+            android:background="#7fffffff"
             android:weightSum="4">
 
             <TextView
@@ -76,7 +77,7 @@
                 android:layout_marginTop="55dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:background="#cac45d5d"
+                android:background="#f5ba3030"
                 android:drawableTop="@drawable/ic_action_life"
                 android:drawableTint="#FFFF"
                 android:gravity="center"
@@ -95,7 +96,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:background="#cb57b3c1"
+                android:background="#e757b3c1"
                 android:drawableTop="@drawable/ic_action_wars"
                 android:drawableTint="#FFFF"
                 android:gravity="center"
@@ -114,7 +115,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:background="#d6ffea8e"
+                android:background="#effacb00"
                 android:drawableTop="@drawable/ic_action_empire"
                 android:drawableTint="#FFFF"
                 android:gravity="center"
@@ -134,7 +135,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:background="#d7ff9fca"
+                android:background="#eac20f5f"
                 android:drawableTop="@drawable/ic_action_comp"
                 android:drawableTint="#FFFF"
                 android:gravity="center"
