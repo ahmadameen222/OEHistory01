@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FlagsActivity"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#515151"
+        android:fontFamily="@font/acme"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="FLAGS"
+        android:textColor="#ffff"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bground"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Ottoman Imperial Standard at sea, Late 19th and early 20th Century."
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/flags1" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bground"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Caliphate standard of Abdulmejid II, used from 1922 to 1924."
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/flags2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bground"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Ottoman army banner during the Austro–Turkish War (1788)"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/flags3" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bground"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="The Ottoman naval flag attributed to the Ottoman Empire"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/flags4" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bground"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Army banner with crescent, as depicted in a 1721"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/flags5" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bground"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Ottoman troops with a variant of the flag during the Balkan Wars"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/flags6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/bground"
+                android:fontFamily="@font/acme"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="OTTOMANS"
+                android:textColor="#ffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:src="@drawable/ottoman" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

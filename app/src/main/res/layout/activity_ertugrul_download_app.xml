@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    android:orientation="vertical"
+    tools:context=".ErtugrulDownloadAppActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:padding="20dp"
+            android:text="ERTUGRUL GAZI"
+            android:textColor="#FFFFFF"
+            android:textSize="26sp"
+            app:fontFamily="@font/aclonica" />
+
+        <TextView
+            android:id="@+id/about_us_tv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight=".5"
+            android:background="@drawable/mosque8"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            app:fontFamily="@font/acme" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bgroundbtn"
+        android:fontFamily="@font/actor"
+        android:padding="15dp"
+        android:text="DOWNLOAD FREE APP ON ERTUGRUL"
+        android:textColor="#ffff"
+        android:textSize="18sp" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ertugrul2" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bgroundbtn"
+        android:fontFamily="@font/actor"
+        android:padding="15dp"
+        android:text="DOWNLOAD FREE APP ON ERTUGRUL"
+        android:textColor="#ffff"
+        android:textSize="18sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="ERTUGRUL GAZI"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:text="@string/life_intro"
+                android:textSize="20sp"
+
+                />
+
+
+            <Button
+                android:id="@+id/b1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/bgroundbtn"
+                android:fontFamily="@font/actor"
+                android:padding="15dp"
+                android:text="DOWNLOAD FREE APP ON ERTUGRUL"
+                android:textColor="#ffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+
+
+

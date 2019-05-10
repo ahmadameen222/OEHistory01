@@ -1,178 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
-    android:orientation="vertical"
+    android:background="#eaeaea"
     tools:context=".MainActivity">
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:layout_alignParentRight="true"
-            android:padding="10dp"
-            android:src="@drawable/mosque8" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#d6d1cfcf"
+            android:layout_height="220dp"
+            android:background="@drawable/ottomans3"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_gravity="center"
                 android:padding="10dp"
                 android:src="@mipmap/ic_launcher" />
 
-            <TextView
-                android:id="@+id/app_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:padding="20dp"
-                android:text="ERTUGRUL"
-                android:textColor="#FFFFFF"
-                android:textSize="33sp"
-                app:fontFamily="@font/aclonica" />
-
         </LinearLayout>
 
-    </RelativeLayout>
+        <!--
+        items
+        -->
 
 
-    <!--
-        <HorizontalScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scrollbars="horizontal">
-    -->
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="vertical"
-            android:background="#7fffffff"
-            android:weightSum="4">
-
-            <TextView
-                android:id="@+id/life_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="#f5ba3030"
-                android:drawableTop="@drawable/ic_action_life"
-                android:drawableTint="#FFFF"
-                android:gravity="center"
-                android:paddingLeft="50dp"
-                android:paddingTop="20dp"
-                android:paddingRight="50dp"
-                android:paddingBottom="20dp"
-                android:text="LIFE"
-                android:textColor="#ffffff"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/wars_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="#e757b3c1"
-                android:drawableTop="@drawable/ic_action_wars"
-                android:drawableTint="#FFFF"
-                android:gravity="center"
-                android:paddingLeft="50dp"
-                android:paddingTop="20dp"
-                android:paddingRight="50dp"
-                android:paddingBottom="20dp"
-                android:text="WARS"
-                android:textColor="#ffff"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/empire_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="#effacb00"
-                android:drawableTop="@drawable/ic_action_empire"
-                android:drawableTint="#FFFF"
-                android:gravity="center"
-                android:paddingLeft="50dp"
-                android:paddingTop="20dp"
-                android:paddingRight="50dp"
-                android:paddingBottom="20dp"
-                android:text="EMPIRE"
-                android:textColor="#ffff"
-                android:textSize="20sp" />
-
-
-            <TextView
-                android:id="@+id/companions_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="#eac20f5f"
-                android:drawableTop="@drawable/ic_action_comp"
-                android:drawableTint="#FFFF"
-                android:gravity="center"
-                android:paddingLeft="50dp"
-                android:paddingTop="20dp"
-                android:paddingRight="50dp"
-                android:paddingBottom="20dp"
-                android:text="COMPANIONS"
-                android:textColor="#ffff"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-    </ScrollView>
-    <!--
-        </HorizontalScrollView>
-    -->
-
-    <!--
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <fragment
-            android:id="@+id/fragment"
-            android:name="com.alameen.dell.ertugrul01.AboutUsFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/adView"
+        <TextView
+            android:id="@+id/otto_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-6081186777692750/2192090909" />
+            android:layout_gravity="bottom"
+            android:background="#a6515151"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="150dp"
+            android:text="OTTOMAN EMPIRE HISTORY"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:fontFamily="@font/aclonica" />
+
+        <ScrollView
+            android:id="@+id/myScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#8dd1d1d1"
+            android:layout_marginTop="210dp"
+            android:requiresFadingEdge="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/empire_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="30dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/image_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:background="@drawable/bground"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="bottom|center"
+                            android:padding="15dp"
+                            android:text="EMPIRE"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/sultan_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="5dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/image_view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:background="@drawable/bground"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="bottom|center"
+                            android:padding="15dp"
+                            android:text="SULTANS"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/wars_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/image_view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:background="@drawable/bground"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="bottom|center"
+                            android:padding="15dp"
+                            android:text="WARS"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/who_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/image_view4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="1dp"
+                            android:src="@drawable/findus" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:background="@drawable/bground"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="bottom|center"
+                            android:padding="15dp"
+                            android:text="JOIN US HERE"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/women_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/image_view3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:background="@drawable/bground"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="bottom|center"
+                            android:padding="15dp"
+                            android:text="WOMEN OF SULTANARE"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ert_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        app:cardCornerRadius="40dp"
+                        app:cardElevation="0dp"
+                        app:cardMaxElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/image_view5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="1dp"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center"
+                            android:background="@drawable/bground"
+                            android:fontFamily="@font/abeezee"
+                            android:gravity="bottom|center"
+                            android:padding="15dp"
+                            android:text="LEARN ABOUT ERTUGRUL GAZI"
+                            android:textColor="@color/white"
+                            android:textSize="17sp" />
+
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/bgroundbtn"
+                    android:fontFamily="@font/actor"
+                    android:text="DOWNLOAD OUR FREE APP HERE"
+                    android:textColor="#ffff"
+                    android:textSize="18sp"
+                    android:layout_alignParentBottom="true"
+                    />
+
+
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+
 
     </RelativeLayout>
--->
 
-</LinearLayout>
+</RelativeLayout>
