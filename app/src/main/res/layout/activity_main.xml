@@ -7,24 +7,24 @@
     android:background="#eaeaea"
     tools:context=".MainActivity">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/ottomans3"
+        android:orientation="vertical">
+
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:background="@drawable/ottomans3"
-            android:orientation="vertical">
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@mipmap/ic_launcher" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:padding="10dp"
-                android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
 
-        </LinearLayout>
-
-        <!--
-        items
-        -->
+    <!--
+    items
+    -->
 
 
 
@@ -75,7 +75,7 @@
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/empire_cv"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginTop="30dp"
@@ -118,7 +118,7 @@
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/sultan_cv"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="15dp"
@@ -160,7 +160,7 @@
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/wars_cv"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
@@ -203,7 +203,7 @@
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/who_cv"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
@@ -246,7 +246,7 @@
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/women_cv"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
@@ -289,7 +289,7 @@
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/ert_cv"
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
+                        android:layout_height="80dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="20dp"
